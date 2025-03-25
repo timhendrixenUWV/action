@@ -1,0 +1,21 @@
+name: 'Hoi action'
+description: 'blabla'
+author: 'Tim Hendrixen'
+branding:
+  icon: 'sunset' 
+  color: 'blue'
+
+inputs:
+  goal:
+    description: 'testparameter'
+    required: true
+    type: string
+
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/checkout@v4
+    - id: hello
+      uses: sormuras/hello-world-java-action@v1
+      with:
+        who-to-greet: 'Michiel Mooren'
